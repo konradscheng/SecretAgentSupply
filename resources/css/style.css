@@ -1,6 +1,7 @@
 html {
   font-size: 18px;
   color: white;
+  font-family: "Helvetica"; /* Defines default font for whole document */
 }
 
 header {
@@ -8,17 +9,24 @@ header {
   color: white;
 }
 
+/****
+
+  with the adjustment to ".logo" and ".logo img" below, the header now fits the 960px width!
+
+****/
+
 .logo {
   display: flex;
   align-items: center;
-  padding: 1rem 0.5rem;
-  max-width: 960px;
+/*  padding: 1rem 0.5rem; I disabled this as it causes a slight alignment issues - you won't get the 960px width basically. padding stuff moved down to ".logo img"*/
+  max-width: 960px; /* technically should set to "width: 960px;" to make sure it stays at that width */
   margin: 0 auto;
 }
 
 .logo img {
   height: 1.5rem;
   padding-right: 0.5rem;
+  padding-left: 0.5rem; /* this gives the necessary left padding for the logo */
 }
 
 .logo span {
@@ -88,10 +96,50 @@ header {
   margin: 3rem 0px 0px;
 }
 
+
+/***
+
+I think it's better if you cut out ".item-img" as a div and work directly with ".item img" to reduce the complexity. The "item-img" div here isn't necessary and it might be the reason it's making it more complicated that it really is. But I've illustrated how it can work with it below.
+
+***/
+
 .item {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* this forces the text to wrap below the image */
+
+  width: 30%; /* specific width as defined in the redline doc */
+
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+
+}
+
+.item-img {
+  padding: 2rem 0;
+  max-height: 9rem;
+  max-width: 60%; /* this affects how the glasses will look */
+  padding-bottom: 2rem;
+}
+
+.item-img img {
+
+  /* use max-width and max-height due to different sized images */
+  max-width: 100%;
+  max-height: 9rem;
+}
+
+/* Your old code below commented out for reference
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: auto;
 }
 
 .item-img {
@@ -115,6 +163,8 @@ header {
   padding: 0.5rem;
   max-width: 8rem;
 }
+
+*/
 
 .business-info {
   max-width: 960px;
