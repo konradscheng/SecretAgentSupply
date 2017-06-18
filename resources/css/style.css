@@ -214,13 +214,6 @@ footer {
     margin-left: 3rem;
   }
 
-  footer {
-    height: 7rem;
-    display: flex;
-    align-items: center;
-    padding-left: 3rem;
-  }
-
   .items {
     display: flex;
     justify-content: space-around;
@@ -233,6 +226,13 @@ footer {
   .business-info {
     display: flex;
     justify-content: space-around;
+  }
+
+  footer {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
   }
 }
 
@@ -258,5 +258,29 @@ footer {
     margin-top: 6.7rem;
   }
 
+  .item {
+    width: 90%;
+  }
+
+  .business-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  .location {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
