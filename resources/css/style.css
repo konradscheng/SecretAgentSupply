@@ -78,7 +78,7 @@ header {
 }
 
 .main-content {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -90,7 +90,7 @@ header {
 
 .item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   width: 30%;
@@ -101,6 +101,8 @@ header {
   padding: 2rem 0;
   max-height: 9rem;
   max-width: 60%;
+  display: flex;
+  align-items: center;
 }
 
 .item-img img {
@@ -108,8 +110,8 @@ header {
   max-width: 100%;
 }
 
-.item-img .glasses {
-
+.glasses {
+  margin-bottom: 2rem;
 }
 
 .item span {
@@ -118,6 +120,7 @@ header {
   text-align: center;
   padding: 0.5rem;
   width: 95%;
+
 }
 
 .business-info {
@@ -163,4 +166,97 @@ footer {
   align-items: center;
   width: 960px;
   height: 5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .desktop {
+      display: initial;
+    }
+
+    .mobile {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+
+  header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  .article-title h4 {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+
+  .article-title h1 {
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  .white-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tablet {
+    display: block;
+  }
+
+  .article-title-container {
+    margin-left: 3rem;
+  }
+
+  footer {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  .items {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .non-tablet {
+    display: none;
+  }
+
+  .business-info {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .non-mobile {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .highlight {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .article-title-container {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 6.7rem;
+  }
+
+
 }
